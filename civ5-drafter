@@ -8,40 +8,17 @@ def valid_input(output, lower, upper):
         try:
             print(output)
             verified_int = int(input())
-            if verified_int < lower or verified_int > upper:
-                error()
+            if verified_int < lower:
+                print("Please enter a number bigger than", lower)
+                continue
+            elif verified_int > upper:
+                print("Please enter a number smaller than", upper)
                 continue
             else:
                 verified = True
         except:
-            error()
+            print("Please enter a number")
     return verified_int
-
-def yes_no_input(output, default):
-    print(output, end='')
-    if default == True:
-        print("(Y/n)")
-    else:
-        print("(y/N)")
-    verified = False
-    while verified == False:
-        verified_yn = input()
-        if verified_yn == "y" or verified_yn == "Y":
-            verified = True
-            answer = True
-        elif verified_yn == "n" or verified_yn == "N":
-            verified = True
-            answer = False
-        elif verified_yn == "":
-            verified = True
-            answer = default
-        else:
-            error()
-            continue
-        return answer
-
-def error():
-    print("Please enter a valid input")
 
 def print_civs(civs):
     print("")
@@ -51,33 +28,30 @@ def print_civs(civs):
             print("")
         else:
             print(", ", end='')
-
-def ban_civs(civs):
-    while True:
-        print_civs(civs)
-        yes_no = yes_no_input("Would you like to ban a civilisation? ", False) 
-        if yes_no == False:
-            break
-        civ_to_ban = valid_input("Pick a civilisation to ban", 1, len(civs)+1)-1
-        print(civs[civ_to_ban])
-        civs.pop(civ_to_ban)
-        
-
-def pick_civs(players, civs_num, civs):
-    for i in range(players):
-        print ("\nPlayer", i+1)
-        temp_civs = civs
-        for j in range(civs_num):
-            n = random.randrange(0, len(temp_civs))
-            print(temp_civs[n])
-            temp_civs.pop(n)
+    print("")
 
 def main():
     all_civs = ["American", "Arabian", "Assyrian", "Austrian", "Aztec", "Babylonian", "Brazilian", "Byzantine", "Carthaginian", "Celtic", "Chinese", "Danish", "Dutch", "Egyptian", "English", "Ethiopian", "French", "German", "Greek", "Hunnic", "Incan", "Indian", "Indonesian", "Iroquois", "Japanese", "Korean", "Mayan", "Mongolian", "Moroccan", "Ottoman", "Persian", "Polish", "Polynesian", "Portuguese", "Roman", "Russian", "Shoshone", "Siamese", "Songhai", "Spanish", "Swedish", "Venetian", "Zulu"]
     player_count = valid_input("How many players are there? (1-12)", 1, 12)
     civs_per_player = valid_input("How many civilisations should each player choose from? (1-3)", 1, 3)
-    ban_civs(all_civs)
-    pick_civs(player_count, civs_per_player, all_civs)
-    print("")
+
+    banned_done = False
+    while banned_done == False:
+        print_civs(all_civs)
+        civ_to_ban = valid_input("Input the number of the civilisation you would like to ban, or \"0\" to exit this menu", 0, len(all_civs))
+        if civ_to_ban == 0:
+            banned_done = True
+        else:
+            civ_to_ban = civ_to_ban - 1
+            print("Banning", all_civs[civ_to_ban] + "...")
+            all_civs.pop(civ_to_ban)
+
+    for i in range(player_count):
+        print ("\nPlayer", i+1)
+        temp_civs = all_civs
+        for j in range(civs_per_player):
+            n = random.randrange(0, len(temp_civs))
+            print(temp_civs[n])
+            temp_civs.pop(n)
 
 main()
