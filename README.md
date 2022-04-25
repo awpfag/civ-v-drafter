@@ -22,6 +22,6 @@ Up to 12 players can pick from up to 3 civilisations. Civilisations can also be 
 
 `sudo make install`
 
-4. And to uninstall:
+<h3>Uninstall</h3>
 
 `sudo make uninstall`
