@@ -21,6 +21,10 @@ Up to 12 players can pick from up to 3 civilisations. Civilisations can also be 
 3. Then install using:
 
   `sudo make install`
+  
+4. Then finally run using:
+
+  `civ-v-drafter`
 
 <h3>Uninstall</h3>
 
