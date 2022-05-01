@@ -30,6 +30,11 @@ def print_civs(civs):
             print(", ", end='')
     print("")
 
+def pick_and_remove(array):
+    n = random.randrange(0, len(array))
+    print(array[n])
+    array.pop(n)
+
 def main():
     all_civs = ["American", "Arabian", "Assyrian", "Austrian", "Aztec", "Babylonian", "Brazilian", "Byzantine", "Carthaginian", "Celtic", "Chinese", "Danish", "Dutch", "Egyptian", "English", "Ethiopian", "French", "German", "Greek", "Hunnic", "Incan", "Indian", "Indonesian", "Iroquois", "Japanese", "Korean", "Mayan", "Mongolian", "Moroccan", "Ottoman", "Persian", "Polish", "Polynesian", "Portuguese", "Roman", "Russian", "Shoshone", "Siamese", "Songhai", "Spanish", "Swedish", "Venetian", "Zulu"]
     player_count = valid_input("How many players are there? (1-12)", 1, 12)
@@ -38,20 +43,18 @@ def main():
     banned_done = False
     while banned_done == False:
         print_civs(all_civs)
-        civ_to_ban = valid_input("Input the number of the civilisation you would like to ban, or \"0\" to exit this menu", 0, len(all_civs))
+        civ_to_ban = valid_input("Input the number of the civilisation you would like to remove, or \"0\" to exit this menu", 0, len(all_civs))
         if civ_to_ban == 0:
             banned_done = True
         else:
             civ_to_ban = civ_to_ban - 1
-            print("Banning", all_civs[civ_to_ban] + "...")
+            print("Removing", all_civs[civ_to_ban] + "...")
             all_civs.pop(civ_to_ban)
 
     for i in range(player_count):
         print ("\nPlayer", i+1)
         temp_civs = all_civs
         for j in range(civs_per_player):
-            n = random.randrange(0, len(temp_civs))
-            print(temp_civs[n])
-            temp_civs.pop(n)
+            pick_and_remove(temp_civs)
 
 main()
