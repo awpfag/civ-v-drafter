@@ -17,8 +17,7 @@ $ sudo pacman -S make git
 Debian/Ubuntu:
 ``` bash 
 $ sudo apt install make git
-```  
-<br>
+```
 
 <h2>Install</h2>
 
