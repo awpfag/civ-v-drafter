@@ -5,6 +5,7 @@ Up to 12 players can pick from up to 3 civilisations. Civilisations can also be 
 <h3>Install</h3>
 
 **Automatically**
+
     ```
     $ curl -Ls "https://raw.githubusercontent.com/luckyy777/civ-v-drafter/main/install.sh" | bash
     ```
