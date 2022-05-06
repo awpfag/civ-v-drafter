@@ -40,6 +40,6 @@ Up to 12 players can pick from up to 3 civilisations. Civilisations can also be 
     $ sudo rm -rf /bin/civ-v-drafter
     ```
     
-    ``` bash
+``` bash
 brew install bash coreutils gnu-sed git
 ```
