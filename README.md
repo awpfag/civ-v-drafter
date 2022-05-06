@@ -2,7 +2,7 @@ Civ V Drafter is a command line program for drafting random civilisations for pl
 
 Up to 12 players can pick from up to 3 civilisations. Civilisations can also be banned so that they aren't randomly picked.
 
-<h3>Dependencies</h3>
+<h2>Dependencies</h2>
 
 Fedora:
 ``` bash 
@@ -19,7 +19,7 @@ Debian/Ubuntu:
 $ sudo apt install make git
 ```  
 
-<h3>Install</h3>
+<h2>Install</h2>
 
 **Automatically**
 
