@@ -16,6 +16,8 @@ $ curl -Ls "https://raw.githubusercontent.com/luckyy777/civ-v-drafter/main/insta
 
 ``` bash
 $ git clone https://github.com/luckyy777/civ-v-drafter
+$ cd civ-v-drafter/
+$ sudo make install
 ```
 
 2. Cd into the folder:
