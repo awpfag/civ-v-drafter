@@ -39,5 +39,5 @@ Up to 12 players can pick from up to 3 civilisations. Civilisations can also be 
 <h3>Uninstall</h3>
     
     ```bash
-    $ sudo make uninstall
+    $ sudo rm -rf /bin/civ-v-drafter
     ```
