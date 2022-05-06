@@ -18,7 +18,7 @@ $ cd civ-v-drafter/
 $ sudo make install
 ```
 
-Then finally run using:
+Then run using:
 
 ``` bash
 $ civ-v-drafter
