@@ -6,40 +6,38 @@ Up to 12 players can pick from up to 3 civilisations. Civilisations can also be 
 
 **Automatically**
 
-    `$ curl -Ls "https://raw.githubusercontent.com/luckyy777/civ-v-drafter/main/install.sh" | bash`
+``` bash
+$ curl -Ls "https://raw.githubusercontent.com/luckyy777/civ-v-drafter/main/install.sh" | bash
+``` 
 
 **Or Manually**
 
 1. Clone the repo:
 
-    ```
-    $ git clone https://github.com/luckyy777/civ-v-drafter
-    ```
+``` bash
+$ git clone https://github.com/luckyy777/civ-v-drafter
+```
 
 2. Cd into the folder:
 
-    ```
-    $ cd civ-v-drafter/
-    ```
+``` bash
+$ cd civ-v-drafter/
+```
 
 3. Then install using:
 
-    ```
-    $ sudo make install
-    ```
+``` bash
+$ sudo make install
+```
   
 4. Then finally run using:
 
-    ```
-    $ civ-v-drafter
-    ```
+``` bash
+$ civ-v-drafter
+```
 
 <h3>Uninstall</h3>
     
 ``` bash
 $ sudo rm -rf /bin/civ-v-drafter
-```
-    
-``` bash
-brew install bash coreutils gnu-sed git
 ```
