@@ -12,27 +12,12 @@ $ curl -Ls "https://raw.githubusercontent.com/luckyy777/civ-v-drafter/main/insta
 
 **Or Manually**
 
-1. Clone the repo:
-
 ``` bash
 $ git clone https://github.com/luckyy777/civ-v-drafter
 $ cd civ-v-drafter/
 $ sudo make install
-```
 
-2. Cd into the folder:
-
-``` bash
-$ cd civ-v-drafter/
-```
-
-3. Then install using:
-
-``` bash
-$ sudo make install
-```
-  
-4. Then finally run using:
+Then finally run using:
 
 ``` bash
 $ civ-v-drafter
