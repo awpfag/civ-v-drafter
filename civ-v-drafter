@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-import random
-import array
+import random, array, sys, argparse
 
 def valid_input(output, lower, upper):
     verified = False
@@ -37,6 +36,7 @@ def pick_and_remove(array):
 
 def main():
     all_civs = ["American", "Arabian", "Assyrian", "Austrian", "Aztec", "Babylonian", "Brazilian", "Byzantine", "Carthaginian", "Celtic", "Chinese", "Danish", "Dutch", "Egyptian", "English", "Ethiopian", "French", "German", "Greek", "Hunnic", "Incan", "Indian", "Indonesian", "Iroquois", "Japanese", "Korean", "Mayan", "Mongolian", "Moroccan", "Ottoman", "Persian", "Polish", "Polynesian", "Portuguese", "Roman", "Russian", "Shoshone", "Siamese", "Songhai", "Spanish", "Swedish", "Venetian", "Zulu"]
+    
     player_count = valid_input("How many players are there? (1-12)", 1, 12)
     civs_per_player = valid_input("How many civilisations should each player choose from? (1-3)", 1, 3)
 
