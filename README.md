@@ -4,15 +4,9 @@ Civilisation V Drafter is a command line program for drafting random civilisatio
 Up to 12 players can pick from up to 3 civilisations. Civilisations can also be banned so that they aren't randomly picked.
 
 ## Usage
-For interactive mode use:
 
 ``` bash
 $ civ-v-drafter
-```
-
-Or for a single command version use:
-``` bash
-$ civ-v-drafter -p [number of players] -c [number of civs per player]
 ```
 
 ## Dependencies
