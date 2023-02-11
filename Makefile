@@ -1,9 +1,9 @@
 PREFIX = /usr
 
 install:
-	@mkdir -p $(DESTDIR)$(PREFIX)/bin
-	@cp -p civ-v-drafter $(DESTDIR)$(PREFIX)/bin/civ-v-drafter
-	@chmod 755 $(DESTDIR)$(PREFIX)/bin/civ-v-drafter
+	@mkdir -p $(PREFIX)/bin
+	@cp -p civ-v-drafter $(PREFIX)/bin/civ-v-drafter
+	@chmod 755 $(PREFIX)/bin/civ-v-drafter
 
 uninstall:
-	@rm -rf $(DESTDIR)$(PREFIX)/bin/civ-v-drafter
+	@rm -rf $(PREFIX)/bin/civ-v-drafter
