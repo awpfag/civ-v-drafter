@@ -33,8 +33,10 @@ $ apt install make git
 ### Automatically
 
 ``` bash
-$ curl -Ls "https://raw.githubusercontent.com/luckyy777/civ-v-drafter/main/install.sh" | bash
+$ curl -Ls "https://raw.githubusercontent.com/luckyy777/civ-v-drafter/main/install.sh" | sudo bash
 ``` 
+
+Substitute `sudo` for whatever alternative you may use.
 
 ### Manually
 
