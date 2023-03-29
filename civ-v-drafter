@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import random, array, sys, argparse
+import random, array
 
 def valid_input(output, lower, upper):
     verified = False
